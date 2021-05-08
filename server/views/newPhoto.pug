@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  a.container(href="/") View All Posts
+  if flashMsg.length > 0
+    .alert.alert-danger <strong>Error: </strong>#{flashMsg}
+  form(name="add-photo" enctype="multipart/form-data" action="/add-photo" method="post")
+    div.form-group
+      label Image title:
+      input.form-control(type="text", name="title")
+      label Image description:
+      input.form-control(type="text", name="description")
+      label(for='image') Image:
+      input#image.form-control(type='file', name='image')
+
+      div.actions
+        input#submit.btn.btn-primary(type="submit", value="Post")

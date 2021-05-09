@@ -39,7 +39,7 @@ app.use(cookieParser());
 
 // app.use('/', indexRouter);
 
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/photos', apiphotos);
 
 // we want the root route

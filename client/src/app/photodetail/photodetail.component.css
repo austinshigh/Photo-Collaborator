@@ -1,3 +1,4 @@
 .detailPhoto img{
-    max-width: 800px;
+    max-width: 600px;
+    max-height: 600px;
 }

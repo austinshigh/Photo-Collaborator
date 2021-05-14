@@ -18,6 +18,12 @@ export class GalleryComponent implements OnInit {
   totalVotes:number = 0;
   mostRecentVotedOn:string = '';
 
+  addNew:boolean = false;
+
+  setAddMode(mode):void{
+    this.addNew = (mode ? true : false);
+  }
+
   handleUpvoted(e):void{
     console.log("app-component gets upvoted:" + e);
     this.totalVotes += 1;

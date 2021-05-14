@@ -1,10 +1,10 @@
 /* Button style is copied from google homepage */
 button{
     background-color: #f8f9fa;
-    border: 1px solid #000000;
+    border: 1px solid #f8f9fa;
     border-radius: 4px;
     color: #3c4043;
-    font-family: arial,sans-serif;
+    font-family: Roboto, arial, sans-serif;
     font-size: 14px;
     margin: 11px 4px;
     padding: 0 16px;
@@ -12,12 +12,31 @@ button{
     height: 36px;
     min-width: 54px;
     text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 li{
     list-style: none;
+    text-align: center;
 }
 
 ul{
     padding: 20px;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  text-decoration: none;
 }

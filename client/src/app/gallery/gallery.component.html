@@ -1,6 +1,4 @@
 <div class="container">
-  <h1>Photo Voting</h1>
-  <p> Total Votes Received: {{ totalVotes }}, Most Recent Vote Recipient: {{ mostRecentVotedOn }}</p>
   <div class="row">
           <app-photo class="col-sm-3"
             *ngFor='let photoObject of photoList'
@@ -9,5 +7,9 @@
             (upvotedEvent)="handleUpvoted($event)">
           </app-photo>
         </div>
+<button class="btn btn-link" *ngIf="!addNew" (click)="setAddMode(true)">Add Photo Menu</button>
+<button class="btn btn-link" *ngIf="addNew" (click)="setAddMode(false)">Hide Add Photo Menu</button>
 </div>
-<app-newphoto (newPhoto) = "updatePhotoList()"></app-newphoto>
+<div *ngIf="addNew">
+  <app-newphoto (newPhoto) = "updatePhotoList()"></app-newphoto>
+</div>
